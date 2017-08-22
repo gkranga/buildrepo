@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu
 
 RUN useradd -ms /bin/bash ranga
 USER ranga
@@ -7,6 +7,7 @@ WORKDIR /home/ranga
 COPY id_rsa .ssh/id_rsa
 COPY id_rsa.pub .ssh/id_rsa.pub
 
+RUN sudo apt-get update 
 RUN sudo apt-get install -y curl
 RUN sudo apt-get install -y make gcc libxslt-dev libxml2-dev ca-certificates wget git-core ssh 
 RUN sudo apt-get install -y --force-yes zlib1g-dev libssl-dev libreadline-dev libyaml-dev
