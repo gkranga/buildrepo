@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:14.02
 RUN useradd -ms /bin/bash ranga
 USER ranga
 WORKDIR /home/ranga
