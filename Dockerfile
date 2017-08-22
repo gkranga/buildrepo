@@ -8,8 +8,7 @@ RUN sudo apt-get install -y make gcc libxslt-dev libxml2-dev ca-certificates wge
 RUN sudo apt-get install -y --force-yes zlib1g-dev libssl-dev libreadline-dev libyaml-dev
 RUN sudo apt-get install -y autoconf -y bison build-essential libreadline6-dev libncurses5-dev libgmp3-dev
 RUN sudo apt-get clean
-RUN sudo useradd ranga
-
+RUN useradd -ms /bin/bash ranga
 WORKDIR /home/ranga
 
 COPY id_rsa .ssh/id_rsa
