@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM swire.azurecr.io/pg-golden-ubuntu:1.0
 
 RUN useradd -ms /bin/bash ranga
 USER ranga
