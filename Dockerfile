@@ -6,7 +6,7 @@ WORKDIR /home/ranga
 
 COPY id_rsa .ssh/id_rsa
 COPY id_rsa.pub .ssh/id_rsa.pub
-
+RUN dpkg-divert --local --rename /usr/bin/ischroot && ln -sf /bin/true /usr/bin/ischroot
 RUN sudo apt-get update
 RUN sudo apt-get install -y curl
 RUN sudo apt-get install -y make gcc libxslt-dev libxml2-dev ca-certificates wget git-core ssh 
