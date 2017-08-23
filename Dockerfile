@@ -69,3 +69,4 @@ ADD start.sh .
 RUN git add .
 EXPOSE 80
 CMD sh start.sh
+RUN echo ""
