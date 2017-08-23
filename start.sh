@@ -1,2 +1,2 @@
-sudo node index.js 
-sudo nginx -g 'daemon off;'
+sudo node index.js & 
+sudo nginx -g 'daemon off;' &
