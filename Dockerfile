@@ -67,5 +67,5 @@ RUN sudo service nginx restart
 
 ADD start.sh .
 RUN git add .
-EXPOSE 8888
+EXPOSE 80
 CMD sh start.sh
