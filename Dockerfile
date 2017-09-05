@@ -65,7 +65,7 @@ RUN sudo nginx -t
 RUN sudo service nginx configtest
 RUN sudo service nginx restart
 
-ADD start.sh .
-RUN git add .
 EXPOSE 80
-CMD sh start.sh
+sudo forever start index.js
+sudo nginx -g 'daemon off;'
+
