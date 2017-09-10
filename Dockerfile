@@ -67,4 +67,4 @@ RUN sudo service nginx restart
 
 EXPOSE 80
 CMD sudo forever start index.js &&  sudo nginx -g 'daemon off;'
-
+RUN echo "test"
